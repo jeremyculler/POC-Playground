@@ -1,0 +1,11 @@
+[2026-03-03 10:22:55] ls -la /Users/jeremyculler/dev/github/poc-playground/ - List all files in project root
+[2026-03-03 10:22:55] find /Users/jeremyculler/dev/github/poc-playground -type f -name "*.html" -o -name "*.json" -o -name "package.json" -o -name ".github" 2>/dev/null | head -20 - Explore current project structure
+[2026-03-03 10:23:14] ls -la /Users/jeremyculler/dev/github/poc-playground/.github 2>/dev/null || echo "No .github directory found" - Check for existing GitHub Actions
+[2026-03-03 10:23:37] npm create vite@latest . -- --template react - Initialize Vite React project in current directory
+[2026-03-03 10:24:16] mkdir -p /Users/jeremyculler/dev/github/poc-playground/src/components /Users/jeremyculler/dev/github/poc-playground/src/data /Users/jeremyculler/dev/github/poc-playground/public - Create source directory structure
+[2026-03-03 10:25:50] mv /Users/jeremyculler/dev/github/poc-playground/index.html /Users/jeremyculler/dev/github/poc-playground/index.html.bak - Backup old index.html
+[2026-03-03 10:26:07] mkdir -p /Users/jeremyculler/dev/github/poc-playground/.github/workflows - Create GitHub workflows directory
+[2026-03-03 10:27:10] npm install - Install npm dependencies
+[2026-03-03 10:27:34] npm run build - Build the React app
+[2026-03-03 10:27:46] ls -la /Users/jeremyculler/dev/github/poc-playground/dist/ - Check dist directory structure
+[2026-03-03 10:29:24] npm run dev - Start Vite dev server on port 7331
