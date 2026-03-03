@@ -1,9 +1,14 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { allPages } from '../data/allPages';
+import Index from './Index';
 
-function Page() {
-  const { id } = useParams();
+function Page({ id }) {
+  // If no page ID, show the index
+  if (!id) {
+    return <Index />;
+  }
+
   const pageIndex = parseInt(id, 10);
   const page = allPages[pageIndex];
 
@@ -105,7 +110,7 @@ function Page() {
       }}>
         {pageIndex > 0 && (
           <Link
-            to={`/page/${pageIndex - 1}`}
+            to={`/?page=${pageIndex - 1}`}
             style={{
               color: '#0066cc',
               textDecoration: 'none',
@@ -120,7 +125,7 @@ function Page() {
         <div style={{ flex: 1 }} />
         {pageIndex < allPages.length - 1 && (
           <Link
-            to={`/page/${pageIndex + 1}`}
+            to={`/?page=${pageIndex + 1}`}
             style={{
               color: '#0066cc',
               textDecoration: 'none',

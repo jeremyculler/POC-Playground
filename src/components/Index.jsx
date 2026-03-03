@@ -67,7 +67,7 @@ function Index() {
               return (
                 <Link
                   key={page.id}
-                  to={`/page/${pageIndex}`}
+                  to={`/?page=${pageIndex}`}
                   style={{
                     display: 'block',
                     padding: '8px 12px',
@@ -109,7 +109,7 @@ function Index() {
               return (
                 <Link
                   key={page.id}
-                  to={`/page/${pageIndex}`}
+                  to={`/?page=${pageIndex}`}
                   style={{
                     display: 'block',
                     padding: '8px 12px',

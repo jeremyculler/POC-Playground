@@ -12,7 +12,7 @@ const safeUrls = [];
 const adversarialUrls = [];
 
 allPages.forEach((page, index) => {
-  const url = `${baseUrl}/page/${index}`;
+  const url = `${baseUrl}/?page=${index}`;
   if (page.isSafe) {
     safeUrls.push(url);
   } else {

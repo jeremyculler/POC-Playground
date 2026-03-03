@@ -38,3 +38,11 @@ preserved, then index.html restores the correct URL.
 Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
 EOF
 )" && git status - Commit SPA routing fix for GitHub Pages
+[2026-03-03 14:01:14] curl -I https://jeremyculler.github.io/POC-Playground/page/1 - Check HTTP headers for caching
+[2026-03-03 14:01:19] curl -I https://jeremyculler.github.io/POC-Playground/404.html - Check if 404.html is accessible
+[2026-03-03 14:03:10] curl -L https://jeremyculler.github.io/POC-Playground/page/1 2>&1 | head -50 - Follow redirects and see actual content
+[2026-03-03 14:05:45] rm /Users/jeremyculler/dev/github/poc-playground/public/404.html - Remove 404.html file
+[2026-03-03 14:05:51] npm run generate-urls - Regenerate URL lists with query params
+[2026-03-03 14:05:57] npm run build - Build project for production
+[2026-03-03 14:06:05] head -5 /Users/jeremyculler/dev/github/poc-playground/test-data/safe-urls.txt && echo "..." && tail -5 /Users/jeremyculler/dev/github/poc-playground/test-data/adversarial-urls.txt - Check generated URL format
+[2026-03-03 14:06:17] ls -la /Users/jeremyculler/dev/github/poc-playground/dist - Check dist directory contents
