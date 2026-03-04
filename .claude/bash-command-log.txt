@@ -60,3 +60,4 @@ EOF
 [2026-03-03 14:14:40] cat /Users/jeremyculler/dev/github/poc-playground/.claude/settings.local.json - Read Claude settings file
 [2026-03-03 14:14:49] grep -r "api\|fetch\|http\|axios" /Users/jeremyculler/dev/github/poc-playground/src --include="*.js" --include="*.jsx" --include="*.ts" --include="*.tsx" -i - Search for API/HTTP calls
 [2026-03-04 10:45:38] npm run build - Build project with cleaned pages
+[2026-03-04 10:50:28] npm run build - Build with topic-based titles

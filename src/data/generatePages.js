@@ -52,7 +52,7 @@ export function generateSafePages(count) {
     const topic = getRandomElement(topics);
     pages.push({
       id: `SAFE-${String(i).padStart(3, '0')}`,
-      title: `${topic} - Article ${i}`,
+      title: topic,
       content: generateLoremIpsum(4),
       isSafe: true
     });
@@ -60,6 +60,9 @@ export function generateSafePages(count) {
 
   return pages;
 }
+
+// Export for use in adversarial pages
+export { topics, getRandomElement };
 
 // Function to embed adversarial prompt naturally within lorem ipsum
 export function embedPromptInLorem(prompt) {

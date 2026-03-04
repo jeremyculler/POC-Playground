@@ -1,10 +1,10 @@
 import adversarialPrompts from '../../claw_adversarial_prompts_expanded.json' with { type: 'json' };
-import { generateSafePages, embedPromptInLorem } from './generatePages.js';
+import { generateSafePages, embedPromptInLorem, topics, getRandomElement } from './generatePages.js';
 
 // Transform adversarial prompts into page format
-const adversarialPages = adversarialPrompts.prompts.map(prompt => ({
+const adversarialPages = adversarialPrompts.prompts.map((prompt, index) => ({
   id: prompt.id,
-  title: `${prompt.category.replace(/_/g, ' ').toUpperCase()} - ${prompt.id}`,
+  title: getRandomElement(topics),
   content: embedPromptInLorem(prompt.prompt),
   isSafe: false,
   category: prompt.category,
