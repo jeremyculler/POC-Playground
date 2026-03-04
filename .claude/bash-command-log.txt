@@ -46,3 +46,17 @@ EOF
 [2026-03-03 14:05:57] npm run build - Build project for production
 [2026-03-03 14:06:05] head -5 /Users/jeremyculler/dev/github/poc-playground/test-data/safe-urls.txt && echo "..." && tail -5 /Users/jeremyculler/dev/github/poc-playground/test-data/adversarial-urls.txt - Check generated URL format
 [2026-03-03 14:06:17] ls -la /Users/jeremyculler/dev/github/poc-playground/dist - Check dist directory contents
+[2026-03-03 14:08:39] npm run generate-urls - Regenerate URL lists
+[2026-03-03 14:08:46] head -10 test-data/safe-urls.txt && echo "" && echo "..." && echo "" && head -10 test-data/adversarial-urls.txt - Verify generated URLs
+[2026-03-03 14:14:07] ls -la /Users/jeremyculler/dev/github/poc-playground/ - List root directory contents
+[2026-03-03 14:14:07] find /Users/jeremyculler/dev/github/poc-playground -type f -name "*.py" | head -20 - Find Python files in the project
+[2026-03-03 14:14:07] find /Users/jeremyculler/dev/github/poc-playground -type f \( -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" -o -name "*.js" \) | head -30 - Find TypeScript and JavaScript files
+[2026-03-03 14:14:13] find /Users/jeremyculler/dev/github/poc-playground/src -type f -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" 2>/dev/null | sort - List all source files
+[2026-03-03 14:14:21] grep -r "fetch\|http\|api\|backend" /Users/jeremyculler/dev/github/poc-playground/src --include="*.jsx" --include="*.js" --include="*.ts" --include="*.tsx" 2>/dev/null | cut -d: -f1 | sort -u - Find files with API/backend calls
+[2026-03-03 14:14:30] head -50 /Users/jeremyculler/dev/github/poc-playground/src/data/allPages.js - Preview allPages.js file
+[2026-03-03 14:14:30] find /Users/jeremyculler/dev/github/poc-playground -type f \( -name "*.py" -o -name "*.server.js" -o -name "*.api.js" \) 2>/dev/null - Search for backend Python or API files
+[2026-03-03 14:14:36] find /Users/jeremyculler/dev/github/poc-playground -type f -name ".*" ! -path "*/node_modules/*" ! -path "*/.git/*" 2>/dev/null - Find hidden config files
+[2026-03-03 14:14:36] ls -la /Users/jeremyculler/dev/github/poc-playground/scripts/ - List scripts directory
+[2026-03-03 14:14:40] cat /Users/jeremyculler/dev/github/poc-playground/.claude/settings.local.json - Read Claude settings file
+[2026-03-03 14:14:49] grep -r "api\|fetch\|http\|axios" /Users/jeremyculler/dev/github/poc-playground/src --include="*.js" --include="*.jsx" --include="*.ts" --include="*.tsx" -i - Search for API/HTTP calls
+[2026-03-04 10:45:38] npm run build - Build project with cleaned pages

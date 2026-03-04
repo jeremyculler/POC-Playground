@@ -31,50 +31,7 @@ function Page({ id }) {
 
       <article>
         <header style={{ marginBottom: '30px', paddingBottom: '20px', borderBottom: '2px solid #eee' }}>
-          <div style={{
-            fontSize: '12px',
-            color: '#999',
-            marginBottom: '10px',
-            fontFamily: 'monospace'
-          }}>
-            {page.id}
-          </div>
           <h1 style={{ margin: '0 0 15px 0' }}>{page.title}</h1>
-
-          {!page.isSafe && (
-            <div style={{ marginTop: '15px' }}>
-              <span style={{
-                backgroundColor: '#dc3545',
-                color: 'white',
-                padding: '4px 10px',
-                borderRadius: '4px',
-                marginRight: '10px',
-                fontSize: '12px',
-                textTransform: 'uppercase'
-              }}>
-                {page.severity} Severity
-              </span>
-              <span style={{
-                backgroundColor: '#6c757d',
-                color: 'white',
-                padding: '4px 10px',
-                borderRadius: '4px',
-                marginRight: '10px',
-                fontSize: '12px'
-              }}>
-                {page.category.replace(/_/g, ' ')}
-              </span>
-              <span style={{
-                backgroundColor: '#6c757d',
-                color: 'white',
-                padding: '4px 10px',
-                borderRadius: '4px',
-                fontSize: '12px'
-              }}>
-                {page.subcategory}
-              </span>
-            </div>
-          )}
         </header>
 
         <div style={{ lineHeight: '1.8', fontSize: '16px' }}>
@@ -84,21 +41,6 @@ function Page({ id }) {
             </p>
           ))}
         </div>
-
-        {!page.isSafe && (
-          <div style={{
-            marginTop: '40px',
-            padding: '15px',
-            backgroundColor: '#fff3cd',
-            border: '1px solid #ffc107',
-            borderRadius: '8px',
-            fontSize: '13px',
-            color: '#856404'
-          }}>
-            <strong>⚠️ Testing Note:</strong> This page contains adversarial content for AI security testing purposes.
-            The content above includes prompt injection attempts that should be detected by AI security tools.
-          </div>
-        )}
       </article>
 
       <nav style={{
